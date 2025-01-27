@@ -1,9 +1,9 @@
 {
-  "timestamp": 1737972490485,
-  "version": "1.0.0",
+  "timestamp": 1737987218506,
+  "version": "1.0.1",
   "fileHashes": {
     "index.js": "f57468e6d7e2c2c0c39617e9242ab386c6dd53d4e6dba6230eed4095bbf79983",
-    "info.json": "a0e2ba9bb82124a437698b824533b66e1f6449487f1e77bea1b432a6c75e634e",
+    "info.json": "aeeba95b9ea84e09cfd77c70bd8193d3f2c923021720165664e58a78b4ce3d3d",
     "resource/default.yml": "73a6eb7e322e82b108b1ca18ca159a430a36c219a501847ca6504f424c55baf7",
     "web/css/index.css": "aaa35f691c65477c00f7c3c3839e2541f6b95e99560dfc837a3c010faf330492",
     "web/index.html": "8e0d3b13e7b979b9da88b4ccb587b2456b13eaaca5610344a5a9fa76055d9916",
@@ -14,6 +14,6 @@
     "web/js/p2p.js": "8bc548f3e2f1e6a5fd2f2dab383d84225824c291db81a693d39a867c639895fe",
     "web/resource/js/echarts.js": "4ff1bfa8176d508c2c654960111ae00044fe891358c0c7b692a92698357011b0"
   },
-  "signature": "sI72TDiDLnAP12EPUM9qJqSi7BEVSjTYuPrtfZS8AjT4rv9t4lr/XRTnIDaM2dKvKTG522iPMzpw6p47iXd9L4Zf0RGMZVIYPnzRCKdXrlDzS1/SHJD0+CbL/uhFEaltXof6mcx7Ye1vB1/wXNTyO0IC0MSKd86/w15ovztdK6ONygoaodqN3DQCFKTm1iOXyLXHsJeFOKxCiH6lshtyfHCW9tWVjHQSxWArwdKXvDsORiVRuGKvwFXO59OBKWeEFacJt346UoHPjiOiFTLyQVJmH94z+IMKkEc5z/HcJcRqZRVQVohogkeC6R41lT2DTVwKgwP1cZeSyOMKqMYAFg==",
+  "signature": "OMZLFYo6K1ILwTIhu/DpmbHXcn41itv+j8FU9bml+udVqDfWvaw21Kz6Ot++g936gOIrQ2WjyFWuocc3IXA2DXdgfnkvo+xnhZF+klr6VPOeJ9z6fpsi/WJVph53zuCjacepQgbMMNIo3RAhKHgqcj3m3mCf52UjYTO0WW0jZvEIPdzncrpHzOEzPGK9V5jhYQbwv0qSo5xwMGJaRZTEfZm0EqKmhteRPFp933WGxL0jhTlNFw9Rtzb440LWY+ZZBhck44GYcBoKZb+L7sDA2yPQ5AOAAqVzdt0HoqRlnACGb5cXkU20lwtOQNDBZqsvokWEC3tzobHMZpS9si1yZQ==",
   "keyId": "official"
 }
