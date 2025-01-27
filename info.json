@@ -1,0 +1,17 @@
+{
+  "name": "p-p-info",
+  "version": "1.0.0",
+  "description": {
+    "zh_tw": "顯示 p2p 相關資訊",
+    "zh-Hant": "顯示 p2p 相關資訊"
+  },
+  "author": ["yayacat"],
+  "dependencies": {
+    "trem": ">=3.1.0",
+    "logger": ">=1.0.0",
+    "config": ">=1.0.3",
+    "p-p": ">=1.0.0"
+  },
+  "resources": ["AGPL-3.0"],
+  "link": "https://github.com/ExpTechTW/trem-p-p-info-plugin"
+}
