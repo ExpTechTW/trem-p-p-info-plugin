@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P 監控面板</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div id="app">
+            <div class="server-box">
+                <div class="server-body">
+                    <div class="server-container">
+                        <div>
+                            <span class="server-title">P2P 狀態</span>
+                            <span class="server-subtitle" id="P2P_time">0000-00-00 00:00:00</span>
+                        </div>
+                        <div>
+                            <span class="server-title">本機時間</span>
+                            <span class="server-subtitle" id="local_time">0000-00-00 00:00:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="server-content">
+                    <div class="container">
+                        <!-- <div class="info-box" draggable="true">
+                            <span class="info-box-title">P2P Server</span>
+                            <span class="info-box-body abnormal" id="rts_stats">離線</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">總共測站數量</span>
+                            <span class="info-box-body" id="rts_all">- / -</span>
+                        </div> -->
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">p2p server 數量</span>
+                            <span class="info-box-body" id="p2p_server_num">- / -</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">p2p v6 server 數量</span>
+                            <span class="info-box-body" id="p2p_v6_server_num">- / -</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">p2p 接收 數量</span>
+                            <span class="info-box-body" id="p2p_in_num">- / -</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">p2p v6 接收 數量</span>
+                            <span class="info-box-body" id="p2p_v6_in_num">- / -</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">p2p 發送 數量</span>
+                            <span class="info-box-body" id="p2p_out_num">- / -</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">p2p v6 發送 數量</span>
+                            <span class="info-box-body" id="p2p_v6_out_num">- / -</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">v4 連接統計</span>
+                            <div id="wave-1"></div>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">v6 連接統計</span>
+                            <div id="wave-2"></div>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">v4 延遲統計</span>
+                            <div id="wave-3"></div>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">v6 延遲統計</span>
+                            <div id="wave-4"></div>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title" id="p2p_server_check">p2p server 列表</span>
+                            <span class="info-box-body abnormal" id="p2p_server"></span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title" id="p2p_v6_server_check">p2p v6 server 列表</span>
+                            <span class="info-box-body abnormal" id="p2p_v6_server"></span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title" id="p2p_in_check">p2p 接收 列表</span>
+                            <span class="info-box-body abnormal" id="p2p_in"></span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title" id="p2p_v6_in_check">p2p v6 接收 列表</span>
+                            <span class="info-box-body abnormal" id="p2p_v6_in"></span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title" id="p2p_out_check">p2p 發送 列表</span>
+                            <span class="info-box-body abnormal" id="p2p_out"></span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title" id="p2p_v6_out_check">p2p v6 發送 列表</span>
+                            <span class="info-box-body abnormal" id="p2p_v6_out"></span>
+                        </div>
+                        <!-- <div class="info-box" draggable="true">
+                            <span class="info-box-title">最低線上測站數量</span>
+                            <span class="info-box-body" id="rts_online_low">- / -</span>
+                        </div>
+                        <div class="info-box" draggable="true">
+                            <span class="info-box-title">最高斷線測站數量</span>
+                            <span class="info-box-body" id="rts_off_hight">- / -</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
