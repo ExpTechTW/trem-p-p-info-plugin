@@ -12,6 +12,7 @@
     "config": ">=1.0.3",
     "p-p": ">=1.0.0"
   },
+  "change": 1,
   "resources": ["AGPL-3.0"],
   "link": "https://github.com/ExpTechTW/trem-p-p-info-plugin"
 }
