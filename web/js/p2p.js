@@ -1,4 +1,5 @@
 const { ipcRenderer } = require("electron");
+const { showToast } = require('./toast');
 const echarts = require("../resource/js/echarts");
 const { MAX_DATA_POINTS, limitDataPoints } = require('./chartConfig');
 
@@ -158,7 +159,7 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
   let p2p_in_lag_avg = 0;
   let p2p_in_lag_avg_num = 0;
 
-  if (info.in.length > 0)
+  if (info.in.length > 0) {
     for (let i = 0; i < info.in.length; i++) {
       // console.log(data.in[i]);
       const p2p_in_list = document.createElement("span");
@@ -207,6 +208,17 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
       p2p_in.append(p2p_in_list_hr);
       p2p_in_lag_avg += p2p_in_lag_num;
     }
+    p2p_in.style.cursor = "pointer"; // 讓滑鼠變成指針樣式
+    p2p_in.title = "點擊複製"; // 提示文字
+    p2p_in.onclick = () => {
+    navigator.clipboard.writeText(p2p_in.innerText)
+        .then(() => {
+          showToast(`p2p 接收 複製成功!`);
+          console.log('p2p 接收 複製成功!');
+        })
+        .catch(err => console.error('複製失敗:', err));
+    };
+  }
 
   p2p_num[5] = Number((p2p_in_lag_avg / p2p_in_lag_avg_num).toFixed(0));
 
@@ -215,7 +227,7 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
   let p2p_out_lag_avg = 0;
   let p2p_out_lag_avg_num = 0;
 
-  if (info.out.length > 0)
+  if (info.out.length > 0) {
     for (let i = 0; i < info.out.length; i++) {
       // console.log(data.out[i]);
       const p2p_out_list = document.createElement("span");
@@ -264,6 +276,17 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
       p2p_out.append(p2p_out_list_hr);
       p2p_out_lag_avg += p2p_out_lag_num;
     }
+    p2p_out.style.cursor = "pointer"; // 讓滑鼠變成指針樣式
+    p2p_out.title = "點擊複製"; // 提示文字
+    p2p_out.onclick = () => {
+    navigator.clipboard.writeText(p2p_out.innerText)
+        .then(() => {
+          showToast(`p2p 發送 複製成功!`);
+          console.log('p2p 發送 複製成功!');
+        })
+        .catch(err => console.error('複製失敗:', err));
+    };
+  }
 
   p2p_num[6] = Number((p2p_out_lag_avg / p2p_out_lag_avg_num).toFixed(0));
 
@@ -330,7 +353,7 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
   let p2p_v6_in_lag_avg = 0;
   let p2p_v6_in_lag_avg_num = 0;
 
-  if (info6.in.length > 0)
+  if (info6.in.length > 0) {
     for (let i = 0; i < info6.in.length; i++) {
       // console.log(data.in[i]);
       const p2p_in_list = document.createElement("span");
@@ -387,6 +410,17 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
       p2p_v6_in.append(p2p_in_list_hr);
       p2p_v6_in_lag_avg += p2p_in_lag_num;
     }
+    p2p_v6_in.style.cursor = "pointer"; // 讓滑鼠變成指針樣式
+    p2p_v6_in.title = "點擊複製"; // 提示文字
+    p2p_v6_in.onclick = () => {
+    navigator.clipboard.writeText(p2p_v6_in.innerText)
+        .then(() => {
+          showToast(`p2p v6 接收 複製成功!`);
+          console.log('p2p v6 接收 複製成功!');
+        })
+        .catch(err => console.error('複製失敗:', err));
+    };
+  }
 
   p2p_num[8] = Number((p2p_v6_in_lag_avg / p2p_v6_in_lag_avg_num).toFixed(0));
 
@@ -395,7 +429,7 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
   let p2p_v6_out_lag_avg = 0;
   let p2p_v6_out_lag_avg_num = 0;
 
-  if (info6.out.length > 0)
+  if (info6.out.length > 0) {
     for (let i = 0; i < info6.out.length; i++) {
       // console.log(data.out[i]);
       const p2p_out_list = document.createElement("span");
@@ -452,6 +486,17 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
       p2p_v6_out.append(p2p_out_list_hr);
       p2p_v6_out_lag_avg += p2p_out_lag_num;
     }
+    p2p_v6_out.style.cursor = "pointer"; // 讓滑鼠變成指針樣式
+    p2p_v6_out.title = "點擊複製"; // 提示文字
+    p2p_v6_out.onclick = () => {
+    navigator.clipboard.writeText(p2p_v6_out.innerText)
+        .then(() => {
+          showToast(`p2p v6 發送 複製成功!`);
+          console.log('p2p v6 發送 複製成功!');
+        })
+        .catch(err => console.error('複製失敗:', err));
+    };
+  }
 
   p2p_num[9] = Number((p2p_v6_out_lag_avg / p2p_v6_out_lag_avg_num).toFixed(0));
 
