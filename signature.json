@@ -1,19 +1,21 @@
 {
-  "timestamp": 1737987218506,
-  "version": "1.0.1",
+  "timestamp": 1741979130180,
+  "version": "1.1.0",
   "fileHashes": {
     "index.js": "f57468e6d7e2c2c0c39617e9242ab386c6dd53d4e6dba6230eed4095bbf79983",
-    "info.json": "aeeba95b9ea84e09cfd77c70bd8193d3f2c923021720165664e58a78b4ce3d3d",
+    "info.json": "c4fef92ca31a04369d3f4be78b4374842787777abea097a61b91c4ca20487ae7",
     "resource/default.yml": "73a6eb7e322e82b108b1ca18ca159a430a36c219a501847ca6504f424c55baf7",
     "web/css/index.css": "aaa35f691c65477c00f7c3c3839e2541f6b95e99560dfc837a3c010faf330492",
-    "web/index.html": "8e0d3b13e7b979b9da88b4ccb587b2456b13eaaca5610344a5a9fa76055d9916",
+    "web/css/toast.css": "f2555beb5e21ba66a99d6ce244c4c68df11fc3302ff139f88a21ad912e9bef92",
+    "web/index.html": "29b85bb6d41a770767ded57656af0f0a2543d390b3208ebe3e9d0317a792a540",
     "web/js/box.js": "89c611e48c3417a503be6a482f4cf4e6d154fb8e5de7bf6a2565c955949bb740",
     "web/js/chartConfig.js": "0076196664484bc5a495d8830643c1e31792fe904b34c93ab39247b35a7d5f4d",
     "web/js/index.js": "1113f56120286010ed67b42f160b2e08087751b83195889285ee3b631b9fde3a",
     "web/js/nav.js": "9f7c1e0226b8b6cffd3d46d791166651e8c2c1e7081a8c8cf4911cac54b6eb1e",
-    "web/js/p2p.js": "8bc548f3e2f1e6a5fd2f2dab383d84225824c291db81a693d39a867c639895fe",
+    "web/js/p2p.js": "35c67fd32c1826596686d83f842140c668e9c9578815647db7538622e89d2e5f",
+    "web/js/toast.js": "14dbf4caa581438c041119250f34bba3e0868dcff70330d0ea7c536d714eb3d8",
     "web/resource/js/echarts.js": "4ff1bfa8176d508c2c654960111ae00044fe891358c0c7b692a92698357011b0"
   },
-  "signature": "OMZLFYo6K1ILwTIhu/DpmbHXcn41itv+j8FU9bml+udVqDfWvaw21Kz6Ot++g936gOIrQ2WjyFWuocc3IXA2DXdgfnkvo+xnhZF+klr6VPOeJ9z6fpsi/WJVph53zuCjacepQgbMMNIo3RAhKHgqcj3m3mCf52UjYTO0WW0jZvEIPdzncrpHzOEzPGK9V5jhYQbwv0qSo5xwMGJaRZTEfZm0EqKmhteRPFp933WGxL0jhTlNFw9Rtzb440LWY+ZZBhck44GYcBoKZb+L7sDA2yPQ5AOAAqVzdt0HoqRlnACGb5cXkU20lwtOQNDBZqsvokWEC3tzobHMZpS9si1yZQ==",
+  "signature": "sgS9O+enXQI2k4iUUeU1uzrXYLzyVa72xhSpv2UqQgmuSHwKieXuVkX7DQgJ1Zu8VsMq7W17V6IXuzz6bgXe8UEqyXebpLMtARLX5BBe94ANRz4VD+ojMFJ5y+0ImBj6bKA+469JCkSVUfut+iyBIJq5T26A8GUiZEbYqtXBvQB18Mv4nQjBJKC0NrSe4LUiaTyy4F6GuATQ84V4b86MiWMt056gCQjqUYojJQVDkwOHrniNgP2TldncdOdB90WZO2jfeUYpPWQDXosI3jb6I9jPMw4UHAWbkshAE5PV2GuYYcn8g29Liu66hwCsvd4GX8iX8ZWmB24AFjYWqeVNRg==",
   "keyId": "official"
 }
