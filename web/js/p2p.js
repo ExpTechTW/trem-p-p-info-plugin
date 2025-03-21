@@ -24,7 +24,9 @@ const charts = [
 	echarts.init(document.getElementById("wave-1"), null, { height: 100, width: 300, renderer: "svg" }),
   echarts.init(document.getElementById("wave-2"), null, { height: 100, width: 300, renderer: "svg" }),
   echarts.init(document.getElementById("wave-3"), null, { height: 100, width: 300, renderer: "svg" }),
-  echarts.init(document.getElementById("wave-4"), null, { height: 100, width: 300, renderer: "svg" })
+  echarts.init(document.getElementById("wave-4"), null, { height: 100, width: 300, renderer: "svg" }),
+  echarts.init(document.getElementById("wave-5"), null, { height: 100, width: 300, renderer: "svg" }),
+  echarts.init(document.getElementById("wave-6"), null, { height: 100, width: 300, renderer: "svg" })
 ];
 for (let i = 0, j = charts.length; i < j; i++) {
   charts[i].setOption({
@@ -622,6 +624,109 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
       },
     ],
   });
+
+  // 統計版本號出現次數
+  const versionCount = {
+    v4: {},
+    v6: {}
+  };
+
+  // 統計v4版本
+  Object.values(info.ver.in).forEach(ver => {
+    versionCount.v4[ver] = (versionCount.v4[ver] || 0) + 1;
+  });
+  Object.values(info.ver.out).forEach(ver => {
+    versionCount.v4[ver] = (versionCount.v4[ver] || 0) + 1;
+  });
+
+  // 統計v6版本
+  Object.values(info6.ver.in).forEach(ver => {
+    versionCount.v6[ver] = (versionCount.v6[ver] || 0) + 1;
+  });
+  Object.values(info6.ver.out).forEach(ver => {
+    versionCount.v6[ver] = (versionCount.v6[ver] || 0) + 1;
+  });
+
+  // 更新v4版本圖表
+  charts[4].setOption({
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'none'  // 移除十字虛線
+      },
+      formatter: function(params) {
+        return `版本 ${params[0].name}: ${params[0].value} 個連線`;
+      }
+    },
+    xAxis: {
+      type: 'category',
+      data: Object.keys(versionCount.v4),
+      axisLabel: {
+        interval: 0,
+        rotate: 45  // 旋轉標籤以防重疊
+      }
+    },
+    yAxis: {
+      type: 'value',
+      minInterval: 1
+    },
+    series: [{
+      type: 'bar',
+      data: Object.values(versionCount.v4),
+      itemStyle: {
+        color: 'rgb(84, 255, 159)'
+      },
+      label: {
+        show: true,
+        position: 'top',
+        formatter: '{b}',  // 顯示x軸的類別名稱(版本號)
+        textStyle: {
+          color: '#e0e0e0' // 設定標籤文字顏色為灰白色
+        }
+      }
+    }]
+  });
+
+  // 更新v6版本圖表
+  charts[5].setOption({
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'none'  // 移除十字虛線
+      },
+      formatter: function(params) {
+        return `版本 ${params[0].name}: ${params[0].value} 個連線`;
+      }
+    },
+    xAxis: {
+      type: 'category',
+      data: Object.keys(versionCount.v6),
+      axisLabel: {
+        interval: 0,
+        rotate: 45  // 旋轉標籤以防重疊
+      }
+    },
+    yAxis: {
+      type: 'value',
+      minInterval: 1
+    },
+    series: [{
+      type: 'bar',
+      data: Object.values(versionCount.v6),
+      itemStyle: {
+        color: 'rgb(84, 255, 159)'
+      },
+      label: {
+        show: true,
+        position: 'top',
+        formatter: '{b}',  // 顯示x軸的類別名稱(版本號)
+        textStyle: {
+          color: '#e0e0e0' // 設定標籤文字顏色為灰白色
+        }
+      }
+    }]
+  });
+
 });
 
 function formatTime(timestamp) {
