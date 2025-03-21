@@ -647,6 +647,21 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
     versionCount.v6[ver] = (versionCount.v6[ver] || 0) + 1;
   });
 
+  // 對版本計數進行排序
+  const sortedV4Versions = Object.entries(versionCount.v4)
+  .sort((a, b) => b[1] - a[1]) // 按數量由高到低排序
+  .reduce((obj, [key, value]) => {
+    obj[key] = value;
+    return obj;
+  }, {});
+
+  const sortedV6Versions = Object.entries(versionCount.v6)
+  .sort((a, b) => b[1] - a[1]) // 按數量由高到低排序
+  .reduce((obj, [key, value]) => {
+    obj[key] = value;
+    return obj;
+  }, {});
+
   // 更新v4版本圖表
   charts[4].setOption({
     tooltip: {
@@ -660,10 +675,9 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
     },
     xAxis: {
       type: 'category',
-      data: Object.keys(versionCount.v4),
+      data: Object.keys(sortedV4Versions),
       axisLabel: {
         interval: 0,
-        rotate: 45  // 旋轉標籤以防重疊
       }
     },
     yAxis: {
@@ -672,18 +686,12 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
     },
     series: [{
       type: 'bar',
-      data: Object.values(versionCount.v4),
+      data: Object.values(sortedV4Versions),
       itemStyle: {
         color: 'rgb(84, 255, 159)'
       },
-      label: {
-        show: true,
-        position: 'top',
-        formatter: '{b}',  // 顯示x軸的類別名稱(版本號)
-        textStyle: {
-          color: '#e0e0e0' // 設定標籤文字顏色為灰白色
-        }
-      }
+      barCategoryGap: '50%',  // 增加柱狀圖之間的距離
+      barGap: '50%',  // 增加柱狀圖之間的距離
     }]
   });
 
@@ -700,10 +708,9 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
     },
     xAxis: {
       type: 'category',
-      data: Object.keys(versionCount.v6),
+      data: Object.keys(sortedV6Versions),
       axisLabel: {
         interval: 0,
-        rotate: 45  // 旋轉標籤以防重疊
       }
     },
     yAxis: {
@@ -712,18 +719,12 @@ ipcRenderer.on("p2pinfo", (event, ans) => {
     },
     series: [{
       type: 'bar',
-      data: Object.values(versionCount.v6),
+      data: Object.values(sortedV6Versions),
       itemStyle: {
         color: 'rgb(84, 255, 159)'
       },
-      label: {
-        show: true,
-        position: 'top',
-        formatter: '{b}',  // 顯示x軸的類別名稱(版本號)
-        textStyle: {
-          color: '#e0e0e0' // 設定標籤文字顏色為灰白色
-        }
-      }
+      barCategoryGap: '50%',  // 增加柱狀圖之間的距離
+      barGap: '50%',  // 增加柱狀圖之間的距離
     }]
   });
 
